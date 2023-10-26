@@ -2605,56 +2605,56 @@ class Explorer extends React.PureComponent<Props, State> {
       ) : null,
     ].filter(Boolean);
 
-    const actionsEl =
-      actionsOptions.length === 0 || this.props.hideActions ? null : (
-        <div
-          style={{
-            minHeight: '50px',
-            maxHeight: '50px',
-            overflow: 'none',
-          }}>
-          <form
-            className="variable-editor-title graphiql-explorer-actions"
-            style={{
-              ...styleConfig.styles.explorerActionsStyle,
-              display: 'flex',
-              flexDirection: 'row',
-              alignItems: 'center',
-              borderTop: '1px solid rgb(214, 214, 214)',
-            }}
-            onSubmit={event => event.preventDefault()}>
-            <span
-              style={{
-                display: 'inline-block',
-                flexGrow: '0',
-                textAlign: 'right',
-              }}>
-              Add new{' '}
-            </span>
-            <select
-              onChange={event => this._setAddOperationType(event.target.value)}
-              value={this.state.newOperationType}
-              style={{flexGrow: '2'}}>
-              {actionsOptions}
-            </select>
-            <button
-              type="submit"
-              className="toolbar-button"
-              onClick={() =>
-                this.state.newOperationType
-                  ? addOperation(this.state.newOperationType)
-                  : null
-              }
-              style={{
-                ...styleConfig.styles.buttonStyle,
-                height: '22px',
-                width: '22px',
-              }}>
-              <span>+</span>
-            </button>
-          </form>
-        </div>
-      );
+    // const actionsEl =
+    //   actionsOptions.length === 0 || this.props.hideActions ? null : (
+    //     <div
+    //       style={{
+    //         minHeight: '50px',
+    //         maxHeight: '50px',
+    //         overflow: 'none',
+    //       }}>
+    //       <form
+    //         className="variable-editor-title graphiql-explorer-actions"
+    //         style={{
+    //           ...styleConfig.styles.explorerActionsStyle,
+    //           display: 'flex',
+    //           flexDirection: 'row',
+    //           alignItems: 'center',
+    //           borderTop: '1px solid rgb(214, 214, 214)',
+    //         }}
+    //         onSubmit={event => event.preventDefault()}>
+    //         <span
+    //           style={{
+    //             display: 'inline-block',
+    //             flexGrow: '0',
+    //             textAlign: 'right',
+    //           }}>
+    //           Add new{' '}
+    //         </span>
+    //         <select
+    //           onChange={event => this._setAddOperationType(event.target.value)}
+    //           value={this.state.newOperationType}
+    //           style={{flexGrow: '2'}}>
+    //           {actionsOptions}
+    //         </select>
+    //         <button
+    //           type="submit"
+    //           className="toolbar-button"
+    //           onClick={() =>
+    //             this.state.newOperationType
+    //               ? addOperation(this.state.newOperationType)
+    //               : null
+    //           }
+    //           style={{
+    //             ...styleConfig.styles.buttonStyle,
+    //             height: '22px',
+    //             width: '22px',
+    //           }}>
+    //           <span>+</span>
+    //         </button>
+    //       </form>
+    //     </div>
+    //   );
 
     const externalFragments =
       this.props.externalFragments &&

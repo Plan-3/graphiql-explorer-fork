@@ -2337,68 +2337,56 @@ var Explorer = function (_React$PureComponent9) {
         'Subscription'
       ) : null].filter(Boolean);
 
-      var actionsEl = actionsOptions.length === 0 || this.props.hideActions ? null : React.createElement(
-        'div',
-        {
-          style: {
-            minHeight: '50px',
-            maxHeight: '50px',
-            overflow: 'none'
-          } },
-        React.createElement(
-          'form',
-          {
-            className: 'variable-editor-title graphiql-explorer-actions',
-            style: _extends({}, styleConfig.styles.explorerActionsStyle, {
-              display: 'flex',
-              flexDirection: 'row',
-              alignItems: 'center',
-              borderTop: '1px solid rgb(214, 214, 214)'
-            }),
-            onSubmit: function onSubmit(event) {
-              return event.preventDefault();
-            } },
-          React.createElement(
-            'span',
-            {
-              style: {
-                display: 'inline-block',
-                flexGrow: '0',
-                textAlign: 'right'
-              } },
-            'Add new',
-            ' '
-          ),
-          React.createElement(
-            'select',
-            {
-              onChange: function onChange(event) {
-                return _this15._setAddOperationType(event.target.value);
-              },
-              value: this.state.newOperationType,
-              style: { flexGrow: '2' } },
-            actionsOptions
-          ),
-          React.createElement(
-            'button',
-            {
-              type: 'submit',
-              className: 'toolbar-button',
-              onClick: function onClick() {
-                return _this15.state.newOperationType ? addOperation(_this15.state.newOperationType) : null;
-              },
-              style: _extends({}, styleConfig.styles.buttonStyle, {
-                height: '22px',
-                width: '22px'
-              }) },
-            React.createElement(
-              'span',
-              null,
-              '+'
-            )
-          )
-        )
-      );
+      // const actionsEl =
+      //   actionsOptions.length === 0 || this.props.hideActions ? null : (
+      //     <div
+      //       style={{
+      //         minHeight: '50px',
+      //         maxHeight: '50px',
+      //         overflow: 'none',
+      //       }}>
+      //       <form
+      //         className="variable-editor-title graphiql-explorer-actions"
+      //         style={{
+      //           ...styleConfig.styles.explorerActionsStyle,
+      //           display: 'flex',
+      //           flexDirection: 'row',
+      //           alignItems: 'center',
+      //           borderTop: '1px solid rgb(214, 214, 214)',
+      //         }}
+      //         onSubmit={event => event.preventDefault()}>
+      //         <span
+      //           style={{
+      //             display: 'inline-block',
+      //             flexGrow: '0',
+      //             textAlign: 'right',
+      //           }}>
+      //           Add new{' '}
+      //         </span>
+      //         <select
+      //           onChange={event => this._setAddOperationType(event.target.value)}
+      //           value={this.state.newOperationType}
+      //           style={{flexGrow: '2'}}>
+      //           {actionsOptions}
+      //         </select>
+      //         <button
+      //           type="submit"
+      //           className="toolbar-button"
+      //           onClick={() =>
+      //             this.state.newOperationType
+      //               ? addOperation(this.state.newOperationType)
+      //               : null
+      //           }
+      //           style={{
+      //             ...styleConfig.styles.buttonStyle,
+      //             height: '22px',
+      //             width: '22px',
+      //           }}>
+      //           <span>+</span>
+      //         </button>
+      //       </form>
+      //     </div>
+      //   );
 
       var externalFragments = this.props.externalFragments && this.props.externalFragments.reduce(function (acc, fragment) {
         if (fragment.kind === 'FragmentDefinition') {
