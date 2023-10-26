@@ -2720,7 +2720,6 @@ class Explorer extends React.PureComponent<Props, State> {
         <div
           style={{
             flexGrow: '1',
-            overflow: 'scroll',
           }}>
           {relevantOperations.map(
             (
