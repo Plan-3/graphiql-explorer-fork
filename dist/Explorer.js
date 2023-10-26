@@ -2529,6 +2529,7 @@ var Explorer = function (_React$PureComponent9) {
           }),
           attribution
         ),
+        '//',
         actionsEl
       );
     }
