@@ -2847,6 +2847,7 @@ class Explorer extends React.PureComponent<Props, State> {
           )}
           {attribution}
         </div>
+
         {actionsEl}
       </div>
     );
